@@ -114,8 +114,8 @@
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
     <PostBuildEvent>
-      <Command>xcopy $(SolutionDir)WinDivert\x86\WinDivert.dll $(OutputPath)
-xcopy $(SolutionDir)WinDivert\x86\WinDivert32.sys $(OutputPath)
+      <Command>xcopy /y $(SolutionDir)WinDivert\x86\WinDivert.dll $(OutputPath)
+xcopy /y $(SolutionDir)WinDivert\x86\WinDivert32.sys $(OutputPath)
 </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
@@ -134,8 +134,8 @@ xcopy $(SolutionDir)WinDivert\x86\WinDivert32.sys $(OutputPath)
       <SubSystem>Windows</SubSystem>
     </Link>
     <PostBuildEvent>
-      <Command>xcopy $(SolutionDir)WinDivert\x64\WinDivert.dll $(OutputPath)
-xcopy $(SolutionDir)WinDivert\x64\WinDivert64.sys $(OutputPath)
+      <Command>xcopy /y $(SolutionDir)WinDivert\x64\WinDivert.dll $(OutputPath)
+xcopy /y $(SolutionDir)WinDivert\x64\WinDivert64.sys $(OutputPath)
 </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
@@ -159,8 +159,8 @@ xcopy $(SolutionDir)WinDivert\x64\WinDivert64.sys $(OutputPath)
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
     <PostBuildEvent>
-      <Command>xcopy $(SolutionDir)WinDivert\x86\WinDivert.dll $(OutputPath)
-xcopy $(SolutionDir)WinDivert\x86\WinDivert32.sys $(OutputPath)
+      <Command>xcopy /y $(SolutionDir)WinDivert\x86\WinDivert.dll $(OutputPath)
+xcopy /y $(SolutionDir)WinDivert\x86\WinDivert32.sys $(OutputPath)
 </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
@@ -183,8 +183,8 @@ xcopy $(SolutionDir)WinDivert\x86\WinDivert32.sys $(OutputPath)
       <SubSystem>Windows</SubSystem>
     </Link>
     <PostBuildEvent>
-      <Command>xcopy $(SolutionDir)WinDivert\x64\WinDivert.dll $(OutputPath)
-xcopy $(SolutionDir)WinDivert\x64\WinDivert64.sys $(OutputPath)
+      <Command>xcopy /y $(SolutionDir)WinDivert\x64\WinDivert.dll $(OutputPath)
+xcopy /y $(SolutionDir)WinDivert\x64\WinDivert64.sys $(OutputPath)
 </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
