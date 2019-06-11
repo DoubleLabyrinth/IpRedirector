@@ -111,10 +111,11 @@
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
     <PostBuildEvent>
       <Command>xcopy $(SolutionDir)WinDivert\x86\WinDivert.dll $(OutputPath)
-xcopy $(SolutionDir)WinDivert\x86\WinDivert.sys $(OutputPath)
+xcopy $(SolutionDir)WinDivert\x86\WinDivert32.sys $(OutputPath)
 </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
@@ -155,10 +156,11 @@ xcopy $(SolutionDir)WinDivert\x64\WinDivert64.sys $(OutputPath)
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
     <PostBuildEvent>
       <Command>xcopy $(SolutionDir)WinDivert\x86\WinDivert.dll $(OutputPath)
-xcopy $(SolutionDir)WinDivert\x86\WinDivert.sys $(OutputPath)
+xcopy $(SolutionDir)WinDivert\x86\WinDivert32.sys $(OutputPath)
 </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
