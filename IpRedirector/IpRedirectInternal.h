@@ -46,27 +46,27 @@ extern "C" {
         HANDLE RouteChangeNotifyHandle;
         HANDLE WinDivertHandle;
         HANDLE WinDivertWorker;
-    } IPV4_REDIRECT_CTX, *PIPV4_REDIRECT_CTX;
+    } IPV4_REDIRECTOR_CTX, *PIPV4_REDIRECTOR_CTX;
 
     IP_REDIRECTOR_API 
-    PIPV4_REDIRECT_CTX WINAPI Ipv4RedirectorCreate();
+    PIPV4_REDIRECTOR_CTX WINAPI Ipv4RedirectorCreate();
 
     IP_REDIRECTOR_API
-    BOOL WINAPI Ipv4RedirectorStart(PIPV4_REDIRECT_CTX Ctx);
+    BOOL WINAPI Ipv4RedirectorStart(PIPV4_REDIRECTOR_CTX Ctx);
 
     IP_REDIRECTOR_API
-    BOOL WINAPI Ipv4RedirectorStop(PIPV4_REDIRECT_CTX Ctx);
+    BOOL WINAPI Ipv4RedirectorStop(PIPV4_REDIRECTOR_CTX Ctx);
 
     IP_REDIRECTOR_API
-    BOOL WINAPI Ipv4RedirectorDestroy(PIPV4_REDIRECT_CTX Ctx);
+    BOOL WINAPI Ipv4RedirectorDestroy(PIPV4_REDIRECTOR_CTX Ctx);
 
     IP_REDIRECTOR_API
-    BOOL WINAPI Ipv4RedirectorSet(PIPV4_REDIRECT_CTX Ctx,
+    BOOL WINAPI Ipv4RedirectorSet(PIPV4_REDIRECTOR_CTX Ctx,
                                   PCSTR lpszRedirectFromAddress, UINT16 RedirectFromPort,
                                   PCSTR lpszRedirectToAddress, UINT16 RedirectToPort);
 
     IP_REDIRECTOR_API
-    BOOL WINAPI Ipv4RedirectorGet(PIPV4_REDIRECT_CTX Ctx,
+    BOOL WINAPI Ipv4RedirectorGet(PIPV4_REDIRECTOR_CTX Ctx,
                                   PSTR lpszRedirectFromAddress, DWORD cbRedirectFromAddress, PUINT16 lpRedirectFromPort,
                                   PSTR lpszRedirectToAddress, DWORD cbRedirectToAddress, PUINT16 lpRedirectToPort);
 

@@ -5,7 +5,7 @@
 
 #pragma comment(lib, "WinDivert")
 
-BOOL WINAPI Ipv4RedirectorStop(PIPV4_REDIRECT_CTX Ctx) {
+BOOL WINAPI Ipv4RedirectorStop(PIPV4_REDIRECTOR_CTX Ctx) {
     ScopeGuard<CriticalSectionTraits> Guard(Ctx->CriticalSection);
 
     // if does not have IPV4_REDIRECTOR_CTX_FLAG_INITIALIZED, refuse to start

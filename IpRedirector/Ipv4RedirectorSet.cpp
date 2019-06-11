@@ -5,7 +5,7 @@
 
 #pragma comment(lib, "WinDivert")
 
-BOOL WINAPI Ipv4RedirectorSet(PIPV4_REDIRECT_CTX Ctx, 
+BOOL WINAPI Ipv4RedirectorSet(PIPV4_REDIRECTOR_CTX Ctx, 
                               PCSTR lpszRedirectFromAddress, UINT16 RedirectFromPort,
                               PCSTR lpszRedirectToAddress, UINT16 RedirectToPort) {
     ScopeGuard<CriticalSectionTraits> Guard(Ctx->CriticalSection);

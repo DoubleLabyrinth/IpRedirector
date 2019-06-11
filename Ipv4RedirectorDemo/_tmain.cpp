@@ -12,7 +12,7 @@
 int _tmain(int argc, PTSTR argv[]) {
     if (argc == 5) {
         DWORD dwStatus = ERROR_SUCCESS;
-        PIPV4_REDIRECT_CTX Ctx = NULL;
+        PIPV4_REDIRECTOR_CTX Ctx = NULL;
 
 #if defined(UNICODE) || defined(_UNICODE)
         OwnedResource RedirectFromAddress(HeapAllocTraits{});

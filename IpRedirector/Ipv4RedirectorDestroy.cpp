@@ -2,7 +2,7 @@
 #include "ScopeGuard.hpp"
 #include "Win32LockTraits.hpp"
 
-BOOL WINAPI Ipv4RedirectorDestroy(PIPV4_REDIRECT_CTX Ctx) {
+BOOL WINAPI Ipv4RedirectorDestroy(PIPV4_REDIRECTOR_CTX Ctx) {
     ScopeGuard<CriticalSectionTraits> Guard(Ctx->CriticalSection);
 
     // refuse to destroy ctx without IPV4_REDIRECTOR_CTX_FLAG_INITIALIZED
@@ -22,7 +22,7 @@ BOOL WINAPI Ipv4RedirectorDestroy(PIPV4_REDIRECT_CTX Ctx) {
     // release resource
     DeleteCriticalSection(&Ctx->CriticalSection);
 
-    ZeroMemory(Ctx, sizeof(IPV4_REDIRECT_CTX));
+    ZeroMemory(Ctx, sizeof(IPV4_REDIRECTOR_CTX));
     HeapFree(GetProcessHeap(), 0, Ctx);
 
     return TRUE;
