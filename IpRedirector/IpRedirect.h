@@ -28,13 +28,13 @@ extern "C" {
 
     IP_REDIRECTOR_API
     BOOL WINAPI Ipv4RedirectorSet(PIPV4_REDIRECTOR_CTX Ctx,
-                                  PCSTR lpszSourceAddress, UINT16 SourcePort,
-                                  PCSTR lpszDestinationAddress, UINT16 DestinationPort);
+                                  PCSTR lpszRedirectFromAddress, UINT16 RedirectFromPort,
+                                  PCSTR lpszRedirectToAddress, UINT16 RedirectToPort);
 
     IP_REDIRECTOR_API
     BOOL WINAPI Ipv4RedirectorGet(PIPV4_REDIRECTOR_CTX Ctx,
-                                  PSTR lpszSourceAddress, DWORD cbSourceAddress, PUINT16 lpSourcePort,
-                                  PSTR lpszDestinationAddress, DWORD cbDestinationAddress, PUINT16 lpDestinationPort);
+                                  PSTR lpszRedirectFromAddress, DWORD cbRedirectFromAddress, PUINT16 lpRedirectFromPort,
+                                  PSTR lpszRedirectToAddress, DWORD cbRedirectToAddress, PUINT16 lpRedirectToPort);
 
 #ifdef __cplusplus
 }
